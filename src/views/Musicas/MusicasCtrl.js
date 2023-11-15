@@ -15,7 +15,7 @@ export default {
       },
 
       filtros: {
-        nome: '',
+        texto: '',
         status: [],
         cantor: []
       },
@@ -56,11 +56,11 @@ export default {
   computed: {
     musicasFiltradas() {
       return this.musicas.filter(musica => {
-        const filtroNome = String(musica.nome).toLowerCase().includes(String(this.filtros.nome).toLowerCase())
+        const filtroTexto = String(musica.nome + musica.trecho).toLowerCase().includes(String(this.filtros.texto).toLowerCase())
         const filtroStatus = this.filtros.status.length !== 0 ? this.filtros.status.includes(musica.status) : true
         const filtroCantor = this.filtros.cantor.length !== 0 ? this.filtros.cantor.includes(musica.cantor) : true
 
-        return filtroNome && filtroStatus && filtroCantor
+        return filtroTexto && filtroStatus && filtroCantor
       })
     }
   }
