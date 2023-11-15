@@ -49,11 +49,14 @@ h3 {
 </style>
 
 <script>
+import API from '../../../services/API'
+
 export default {
-  props: ['musica', 'mudaTom', 'tomSelecionado'],
+  props: ['musicaProp', 'mudaTom', 'tomSelecionado'],
 
   data() {
     return {
+      musica: {},
       cifraFormatada: [],
       camposHarmonicos: {
         'C': { I: 'C', II: 'D', III: 'E', IV: 'F', V: 'G', VI: 'A', VII: 'B' },
@@ -74,16 +77,28 @@ export default {
   },
 
   watch: {
+    async musicaProp() {
+      await this.buscaCifra()
+      this.formataCifra()
+    },
+
     tomSelecionado() {
       this.formataCifra()
     }
   },
 
-  created() {
+  async created() {
+    await this.buscaCifra()
     this.formataCifra()
   },
 
   methods: {
+
+    async buscaCifra() {
+      const cifra = await API.musicas.buscarCifra(this.musicaProp.id)
+
+      this.musica = { ...this.musicaProp, ...cifra }
+    },
 
     formataCifra() {
       const cifra = []
@@ -92,9 +107,11 @@ export default {
         cifra.push(JSON.parse(JSON.stringify(this.musica.partes[parte])))
       }
 
-      for (const parte of cifra) {
-        for (const linha of parte) {
-          linha.acordes = this.trocaGrausPorNotas(linha.acordes)
+      if (this.camposHarmonicos[this.tomSelecionado]) {
+        for (const parte of cifra) {
+          for (const linha of parte) {
+            linha.acordes = this.trocaGrausPorNotas(linha.acordes)
+          }
         }
       }
 

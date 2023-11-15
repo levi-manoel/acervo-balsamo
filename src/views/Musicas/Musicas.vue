@@ -41,7 +41,7 @@
 
     <br />
 
-    <el-table :data="musicasFiltradas" v-loading="carregandoMusicas" highlight-current-row style="width: 100%" @current-change="selecionaMusica">
+    <el-table :data="musicasFiltradas" v-loading="carregandoMusicas" v-horizontal-scroll max-height="500" highlight-current-row @current-change="selecionaMusica">
       <el-table-column align="center" width="250" label="Nome" prop="nome" />
       <el-table-column align="center" width="120" label="Cantor(a)" prop="cantor" />
       <el-table-column align="center" width="120" label="Tom" prop="tom" />
@@ -50,10 +50,11 @@
           <el-tag :type="coresTags[scope.row.status]" disable-transitions>{{ scope.row.status }}</el-tag>
         </template>
       </el-table-column>
+      <el-table-column align="center" width="500" label="Trecho" prop="trecho" />
     </el-table>
 
     <section v-if="mostraMaisInformacoes" style="margin-top: 2.5em;">
-      <cifra :musica="musicaSelecionada" :mudaTom="mudaTom" :tomSelecionado="tomSelecionado" />
+      <cifra :musicaProp="musicaSelecionada" :mudaTom="mudaTom" :tomSelecionado="tomSelecionado" />
     </section>
   </main>
 </template>
