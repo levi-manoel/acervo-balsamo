@@ -7,6 +7,7 @@ export default {
   },
   data() {
     return {
+      telaPequena: false,
       musicas: [],
       coresTags: {
         'Tá pegada': 'success',
@@ -28,6 +29,10 @@ export default {
 
   async created() {
     await this.carregaLista()
+
+    if (screen.width < 720) {
+      this.telaPequena = true
+    }
   },
 
   methods: {

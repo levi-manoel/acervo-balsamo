@@ -1,10 +1,9 @@
 <template>
   <div>
     <div>
-      <el-container>
+      <el-container class="container">
         <el-header class="header">
-          <h3>{{ musica.nome }}</h3>
-          <el-dropdown trigger="click" size="small" class="btn" @command="mudaTom">
+          <el-dropdown trigger="click" size="small" class="btn" @command="mudaTom" style="width: 100%;">
             <span class="el-dropdown-link">
               <el-button size="small">
                 Tom: {{ tomSelecionado }}<el-icon class="el-icon--right"><arrow-down /></el-icon>
@@ -37,14 +36,15 @@
 </template>
 
 <style scoped>
-h3 {
-  font-size: larger;
-}
-
 .header {
   display: flex;
   flex-direction: column;
   align-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
 }
 </style>
 

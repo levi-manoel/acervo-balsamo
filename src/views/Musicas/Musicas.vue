@@ -42,24 +42,40 @@
     <br />
 
     <el-table :data="musicasFiltradas" v-loading="carregandoMusicas" v-horizontal-scroll max-height="500">
-      <el-table-column label="Cifra" width="100" type="expand">
+      <el-table-column v-if="!telaPequena" label="Cifra" :width="100" type="expand">
         <template #default="props">
           <cifra :musicaProp="props.row" :tomInicial="props.row.tom" />
         </template>
       </el-table-column>
       <el-table-column align="center" width="250" label="Nome" prop="nome" />
-      <el-table-column align="center" width="120" label="Cantor(a)" prop="cantor" />
-      <el-table-column align="center" width="120" label="Tom" prop="tom" />
-      <el-table-column align="center" width="120" label="Status" prop="status">
+      <el-table-column v-if="telaPequena" label="Detalhes" width="80" type="expand">
+        <template #default="props">
+          <div class="container_detalhes">
+            <span>Cantor(a): {{ props.row.cantor }}</span>
+            <span>Trecho: {{ props.row.trecho }}</span>
+            <span>Status: <el-tag :type="coresTags[props.row.status]" disable-transitions>{{ props.row.status }}</el-tag></span>
+          </div>
+          <cifra :musicaProp="props.row" :tomInicial="props.row.tom" :telaPequena="true" />
+        </template>
+      </el-table-column>
+      <el-table-column align="center" width="120" label="Cantor(a)" prop="cantor" v-if="!telaPequena" />
+      <el-table-column align="center" width="120" label="Tom" prop="tom" v-if="!telaPequena" />
+      <el-table-column align="center" width="120" label="Status" prop="status" v-if="!telaPequena">
         <template #default="scope">
           <el-tag :type="coresTags[scope.row.status]" disable-transitions>{{ scope.row.status }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column align="center" width="500" label="Trecho" prop="trecho" />
+      <el-table-column align="center" width="500" label="Trecho" prop="trecho" v-if="!telaPequena" />
     </el-table>
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container_detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
 
 <script src="./MusicasCtrl" />
