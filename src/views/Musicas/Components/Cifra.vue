@@ -50,12 +50,13 @@ h3 {
 
 <script>
 export default {
-  props: ['musicaProp', 'mudaTom', 'tomSelecionado'],
+  props: ['musicaProp', 'tomInicial'],
 
   data() {
     return {
       musica: {},
       cifraFormatada: [],
+      tomSelecionado: null,
       camposHarmonicos: {
         'C': { I: 'C', II: 'D', III: 'E', IV: 'F', V: 'G', VI: 'A', VII: 'B' },
         'Db': { I: 'Db', II: 'Eb', III: 'F', IV: 'Gb', V: 'Ab', VI: 'Bb', VII: 'C' },
@@ -85,6 +86,7 @@ export default {
   },
 
   created() {
+    this.tomSelecionado = this.tomInicial
     this.formataCifra()
   },
 
@@ -107,6 +109,10 @@ export default {
       }
 
       this.cifraFormatada = cifra
+    },
+
+    mudaTom(tom) {
+      this.tomSelecionado = tom
     },
 
     trocaGrausPorNotas(acordes) {
