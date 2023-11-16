@@ -42,13 +42,13 @@
     <br />
 
     <el-table :data="musicasFiltradas" v-loading="carregandoMusicas" v-horizontal-scroll max-height="500">
-      <el-table-column v-if="!telaPequena" label="Cifra" :width="100" type="expand">
+      <el-table-column v-if="!telaPequena" label="Cifra" width="100" type="expand">
         <template #default="props">
           <cifra :musicaProp="props.row" :tomInicial="props.row.tom" />
         </template>
       </el-table-column>
-      <el-table-column align="center" width="250" label="Nome" prop="nome" />
-      <el-table-column v-if="telaPequena" label="Detalhes" width="80" type="expand">
+      <el-table-column align="center" :width="telaPequena ? null : 250" label="Nome" prop="nome" />
+      <el-table-column v-if="telaPequena" label="Detalhes" width="100" type="expand">
         <template #default="props">
           <div class="container_detalhes">
             <span>Cantor(a): {{ props.row.cantor }}</span>
