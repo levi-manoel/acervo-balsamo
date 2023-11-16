@@ -2,6 +2,7 @@
   "name": "acervo_de_musicas_digital",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
@@ -10,6 +11,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@supabase/supabase-js": "^2.38.4",
     "axios": "^1.4.0",
     "dotenv": "^16.3.1",
     "el-table-horizontal-scroll": "^1.2.5",

@@ -1,20 +1,25 @@
-import musicasJSON from './musicas.json'
+import { createClient } from '@supabase/supabase-js'
 
 async function listar() {
   try {
-    return musicasJSON.musicas
-    
-  } catch (error) {
-    console.log(error)
-  }
-}
 
-async function buscarCifra(id) {
-  try {
-    const cifraIndisponivel = { ordem: 'A', partes: { A: [{ acordes: '-- cifra indisponível --', letra: '' }] } }
-
-    return musicasJSON.cifras[id] ?? cifraIndisponivel
+    const supabase = createClient('https://otxkoxaluxpuvdnhskne.supabase.co', import.meta.env.VITE_SUPABASE_KEY)
     
+    const { data: musicas } = await supabase.from('musica').select('*')
+
+    return musicas.map(musica => {
+      if (!musica.cifra) {
+        musica.cifra = {
+          ordem: 'A',
+          partes: {
+            'A': [{ acordes: ' -- cifra indisponível -- ', letra: '' }]
+          }
+        }
+      }
+
+      return musica
+    })
+
   } catch (error) {
     console.log(error)
   }
@@ -22,5 +27,4 @@ async function buscarCifra(id) {
 
 export default {
   listar,
-  buscarCifra,
 }

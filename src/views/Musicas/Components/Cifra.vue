@@ -49,8 +49,6 @@ h3 {
 </style>
 
 <script>
-import API from '../../../services/API'
-
 export default {
   props: ['musicaProp', 'mudaTom', 'tomSelecionado'],
 
@@ -77,8 +75,7 @@ export default {
   },
 
   watch: {
-    async musicaProp() {
-      await this.buscaCifra()
+    musicaProp() {
       this.formataCifra()
     },
 
@@ -87,21 +84,15 @@ export default {
     }
   },
 
-  async created() {
-    await this.buscaCifra()
+  created() {
     this.formataCifra()
   },
 
   methods: {
-
-    async buscaCifra() {
-      const cifra = await API.musicas.buscarCifra(this.musicaProp.id)
-
-      this.musica = { ...this.musicaProp, ...cifra }
-    },
-
     formataCifra() {
       const cifra = []
+
+      this.musica = { ...this.musicaProp, ...this.musicaProp.cifra }
 
       for (const parte of this.musica.ordem.split(';')) {
         cifra.push(JSON.parse(JSON.stringify(this.musica.partes[parte])))
