@@ -4,13 +4,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="main__container">
-    <header>
-      <h2>Acervo de Músicas</h2>
-    </header>
-
     <main>
       <RouterView />
-
     </main>
   </div>
 </template>
@@ -20,11 +15,5 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   flex-direction: column;
   align-content: center;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  padding: 3em 0;
 }
 </style>
