@@ -49,7 +49,7 @@ export default {
       return this.musicas.filter(musica => {
         const filtroTexto = String(musica.nome + musica.trecho).toLowerCase().includes(String(this.filtros.texto).toLowerCase())
         const filtroStatus = this.filtros.status.length !== 0 ? this.filtros.status.includes(musica.status) : true
-        const filtroCantor = this.filtros.cantor.length !== 0 ? this.filtros.cantor.includes(musica.cantor) : true
+        const filtroCantor = this.filtros.cantor.length !== 0 ? this.filtros.cantor.some(cantor => musica.tons.map(tom => tom.cantor).join(';').includes(cantor)) : true
 
         return filtroTexto && filtroStatus && filtroCantor
       })
