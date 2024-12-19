@@ -49,7 +49,7 @@
         </template>
       </el-table-column>
       <el-table-column align="center" :width="telaPequena ? null : 250" label="Nome" prop="nome" />
-      <el-table-column v-if="!telaPequena" align="center" label="Tons" prop="tons">
+      <el-table-column v-if="!telaPequena" align="center" width="250" label="Tons" prop="tons">
         <template #default="scope">
           <span v-if="scope.row.tons.length > 0" v-for="tom of scope.row.tons" :key="tom">{{ tom.cantor }} ({{ tom.tom }}) <br /></span>
           <span v-else>-</span>
