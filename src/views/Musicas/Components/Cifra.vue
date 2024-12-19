@@ -8,7 +8,6 @@
               <el-button size="small">
                 Tom: {{ tomSelecionado }}<el-icon class="el-icon--right"><arrow-down /></el-icon>
               </el-button>
-              {{ tomSelecionado !== musica.tom ? ` - (Original: ${musica.tom})` : '' }}
             </span>
 
             <template #dropdown>

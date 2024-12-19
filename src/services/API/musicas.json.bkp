@@ -1,0 +1,154 @@
+{
+  "musicas": [
+    {
+      "id": 0,
+      "nome": "Toda Glória e Majestade",
+      "tons": [],
+      "status": "Tá pegada",
+      "trecho": "-"
+    },
+    {
+      "id": 1,
+      "nome": "Grande é o Senhor",
+      "tons": [{
+        "cantor": "Jeniffer",
+        "tom": "F"
+      }, {
+        "cantor": "Betinho",
+        "tom": "A"
+      }],
+      "status": "Tá pegada",
+      "trecho": "Queremos o Teu nome engrandecer..."
+    },
+    {
+      "id": 2,
+      "nome": "Senhor te Quero",
+      "tons": [{
+        "cantor": "Betinho",
+        "tom": "G"
+      }],
+      "status": "Tá pegada",
+      "trecho": "Eu te busco Te procuro oh Deus..."
+    },
+    {
+      "id": 3,
+      "nome": "Vou te Alegrar",
+      "tons": [{
+        "cantor": "Samara",
+        "tom": "E"
+      }],
+      "status": "Tá pegada",
+      "trecho": "Eu me rendo a Ti perante os homens perante tudo..."
+    },
+    {
+      "id": 3,
+      "nome": "Atos 2",
+      "tons": [{
+        "cantor": "Jeniffer",
+        "tom": "Dm"
+      }],
+      "status": "Tá pegada",
+      "trecho": "Nós estamos aqui tão sedentos de Ti..."
+    },
+    {
+      "id": 4,
+      "nome": "Atos 2",
+      "tons": [{
+        "cantor": "Jeniffer",
+        "tom": "Dm"
+      }],
+      "status": "Tá pegada",
+      "trecho": "Nós estamos aqui tão sedentos de Ti..."
+    }
+  ],
+  "cifras": {
+    "0": {
+      "ordem": "INTRO;A;A;SOLOA;A;A;SOLOB;B;A;A1;PONTE;B1;B1;A;A;A;A1;FINAL",
+      "partes": {
+        "INTRO": [
+          {
+            "acordes": "(I)  (III)m  (VI)m  (V)  (2x)"
+          }
+        ],
+        "A": [
+          {
+            "acordes": "(I)                    (III)m               (VI)m",
+            "letra": "Toda glória e majestade a Ti"
+          },
+          {
+            "acordes": "                     (V)",
+            "letra": "Que reinas para sempre"
+          }
+        ],
+        "A1": [
+          {
+            "acordes": "(I)                    (III)m               (VI)m",
+            "letra": "Toda glória e majestade a Ti"
+          },
+          {
+            "acordes": "                     (V)               (IV)    (V)",
+            "letra": "Que reinas para sempre"
+          }
+        ],
+        "SOLOA": [
+          {
+            "acordes": "Solo: (I)  (III)m  (VI)m  (V)  (2x)"
+          }
+        ],
+        "SOLOB": [
+          {
+            "acordes": "Solo: (IV)  (V)  (IV)  (V) (II)m  (I)/(III)  (IV)  (V)"
+          }
+        ],
+        "B": [
+          {
+            "acordes": "(I)                                                 (V)/(VII)",
+            "letra": "Honra a Ti Senhor dos senhores"
+          },
+          {
+            "acordes": "                      (V)                    (IV)    (V)",
+            "letra": "Majestade a Ti Reis dos reis"
+          },
+          {
+            "acordes": "                  (I)    (V)",
+            "letra": "Soberano Deus"
+          }
+        ],
+        "B1": [
+          {
+            "acordes": "(I)                                                 (V)/(VII)",
+            "letra": "Honra a Ti Senhor dos senhores"
+          },
+          {
+            "acordes": "                      (V)                    (IV)    (V)  (break)",
+            "letra": "Majestade a Ti Reis dos reis"
+          },
+          {
+            "acordes": "                  (I)    (V)",
+            "letra": "Soberano Deus"
+          }
+        ],
+        "PONTE": [
+          {
+            "acordes": "                  (IV)    (V)",
+            "letra": "Soberano Deus"
+          },
+          {
+            "acordes": "                  (II)    (I)/(III)",
+            "letra": "Soberano Deus"
+          },
+          {
+            "acordes": "                  (I)    (V)",
+            "letra": "Soberano Deus"
+          }
+        ],
+        "FINAL": [
+          {
+            "acordes": "                  (I)",
+            "letra": "Soberano Deus"
+          }
+        ]
+      }
+    }
+  }
+}
