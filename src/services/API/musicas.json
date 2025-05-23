@@ -1,71 +1,117 @@
 {
-  "musicas": [
-    {
-      "id": 0,
-      "nome": "Grande é o Senhor",
-      "tons": [{
-        "cantor": "Jeniffer",
-        "tom": "F"
-      }, {
-        "cantor": "Betinho",
-        "tom": "A"
-      }],
-      "status": "Tá pegada",
-      "trecho": "Queremos o Teu nome engrandecer..."
-    },
-    {
-      "id": 1,
-      "nome": "Senhor te Quero",
-      "tons": [{
-        "cantor": "Betinho",
-        "tom": "G"
-      }],
-      "status": "Tá pegada",
-      "trecho": "Eu te busco Te procuro oh Deus..."
-    },
-    {
-      "id": 2,
-      "nome": "Vou te Alegrar",
-      "tons": [{
-        "cantor": "Samara",
-        "tom": "E"
-      }],
-      "status": "Tá pegada",
-      "trecho": "Eu me rendo a Ti perante os homens perante tudo..."
-    },
-    {
-      "id": 3,
-      "nome": "Atos 2",
-      "tons": [{
-        "cantor": "Jeniffer",
-        "tom": "Dm"
-      }],
-      "status": "Tá pegada",
-      "trecho": "Nós estamos aqui tão sedentos de Ti..."
-    },
-    {
-      "id": 4,
-      "nome": "Consagração",
-      "tons": [{
-        "cantor": "Maeli",
-        "tom": "E"
-      }],
-      "status": "Tá pegada",
-      "trecho": "Ao Rei dos reis consagrao tudo o que sou..."
-    },
-    {
-      "id": 5,
-      "nome": "Primeiro Amor",
-      "tons": [{
-        "cantor": "Maeli",
-        "tom": "E"
-      }, {
-        "cantor": "Samara",
-        "tom": "F"
-      }],
-      "status": "Tá pegada",
-      "trecho": "Eu quero voltar ao início de tudo..."
-    }
-  ],
-  "cifras": {}
+    "musicas": [
+        {
+            "id": 0,
+            "nome": "Grande é o Senhor",
+            "tons": [
+                {
+                    "cantor": "Jeniffer",
+                    "tom": "F"
+                },
+                {
+                    "cantor": "Betinho",
+                    "tom": "A"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Queremos o Teu nome engrandecer..."
+        },
+        {
+            "id": 1,
+            "nome": "Senhor te Quero",
+            "tons": [
+                {
+                    "cantor": "Betinho",
+                    "tom": "G"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Eu te busco Te procuro oh Deus..."
+        },
+        {
+            "id": 2,
+            "nome": "Vou te Alegrar",
+            "tons": [
+                {
+                    "cantor": "Samara",
+                    "tom": "E"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Eu me rendo a Ti perante os homens perante tudo..."
+        },
+        {
+            "id": 3,
+            "nome": "Atos 2",
+            "tons": [
+                {
+                    "cantor": "Jeniffer",
+                    "tom": "Dm"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Nós estamos aqui tão sedentos de Ti..."
+        },
+        {
+            "id": 4,
+            "nome": "Consagração",
+            "tons": [
+                {
+                    "cantor": "Maeli",
+                    "tom": "E"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Ao Rei dos reis consagrao tudo o que sou..."
+        },
+        {
+            "id": 5,
+            "nome": "Primeiro Amor",
+            "tons": [
+                {
+                    "cantor": "Maeli",
+                    "tom": "E"
+                },
+                {
+                    "cantor": "Samara",
+                    "tom": "F"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Eu quero voltar ao início de tudo..."
+        },
+        {
+            "id": 6,
+            "nome": "Se não for pra te adorar",
+            "tons": [
+                {
+                    "cantor": "Maeli",
+                    "tom": "E"
+                },
+                {
+                    "cantor": "Samara",
+                    "tom": "F"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Diante do trono, senhor. Quero levar minha oferta de amor..."
+        },
+        {
+            "id": 6,
+            "nome": "Tributo A \"Iehovah\"",
+            "tons": [
+                {
+                    "cantor": "Laís",
+                    "tom": "C"
+                },
+                {
+                    "cantor": "Samara",
+                    "tom": "C"
+                }
+            ],
+            "status": "Tá pegada",
+            "trecho": "Eu sou grato, por tudo, que tenho..."
+        }
+    ],
+    "cifras": {}
 }
